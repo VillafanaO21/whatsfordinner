@@ -1,5 +1,22 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.container
+    div.card
+      div.card-header
+        div.backdrop
+        div.card-title Jack-IN-THE-Box
+        img.card-header-image(src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDCxFREXXXKc69lq9DE0GZLoVoYRLdGAuKjA&usqp=CAU')
+      div.card-body
+        div.edit
+          a(href='#') Edit
+        div.card-details
+          div.category American
+          div.rating
+            span &#X2b50;
+            span &#X2b50;
+        div.description
+            //a single pipe | allows you to type free floating text
+            |SHBDVPOEJGORNMBVOIPSF
+            |SHBDVPOEJGORNMBVOIPSF
+            |SHBDVPOEJGORNMBVOIPSF
