@@ -1,7 +1,10 @@
 extends layout
 
 block content
+  include mixins/restaurantCard
   div.container
+    each restaurant in restaurants
+      +restaurantCard(restaurant)
     div.card
       div.card-header
         div.backdrop
@@ -13,9 +16,9 @@ block content
         div.card-details
           div.category American
           div.rating
+            -for(let i = 0; i<restaurant.rating; i++)
             span &#X2b50;
-            span &#X2b50;
-        div.description
+        div.description=restaurant.description
             //a single pipe | allows you to type free floating text
             |SHBDVPOEJGORNMBVOIPSF
             |SHBDVPOEJGORNMBVOIPSF
